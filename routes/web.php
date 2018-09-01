@@ -14,3 +14,72 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// リスト2-3
+// Route::get('hello',function () {
+//    return '<html><body><h1>Hello</h1><p>This is sample page.</p></body></html>';
+// });
+
+// リスト2-4
+// $html = <<<EOF
+// <html>
+// <head>
+// <title>Hello</title>
+// <style>
+// body {font-size:16pt; color:#999; }
+// h1 { font-size:100pt; text-align:right; color:#eee;
+//    margin:-40px 0px -50px 0px; }
+// </style>
+// </head>
+// <body>
+//    <h1>Hello</h1>
+//    <p>This is sample page.</p>
+//    <p>これは、サンプルで作ったページです。</p>
+// </body>
+// </html>
+// EOF;
+
+// Route::get('hello',function () use ($html) {
+//    return $html;
+// });
+
+
+// リスト2-5
+// Route::get('hello/{msg?}',function ($msg='no message.') {
+
+// $html = <<<EOF
+// <html>
+// <head>
+// <title>Hello</title>
+// <style>
+// body {font-size:16pt; color:#999; }
+// h1 { font-size:100pt; text-align:right; color:#eee;
+//    margin:-40px 0px -50px 0px; }
+// </style>
+// </head>
+// <body>
+//    <h1>Hello</h1>
+//    <p>{$msg}</p>
+//    <p>これは、サンプルで作ったページです。</p>
+// </body>
+// </html>
+// EOF;
+
+//    return $html;
+// });
+
+// リスト 2-8
+// Route::get('hello', 'HelloController@index');
+
+// リスト2-10
+// Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+
+// リスト2-12
+// Route::get('hello', 'HelloController@index');
+// Route::get('hello/other', 'HelloController@other');
+
+// リスト2-14
+// Route::get('hello', 'HelloController');
+
+// リスト2-16
+Route::get('hello', 'HelloController@index');
